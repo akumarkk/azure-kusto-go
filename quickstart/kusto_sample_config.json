@@ -1,8 +1,8 @@
 {
-  "kustoUri": "https://help.kusto.windows.net",
-  "ingestUri": "https://ingest-help.kusto.windows.net",
-  "databaseName": "MyDatabase",
-  "tableName": "SampleTable",
+  "kustoUri": "https://kvc-0356mj3ry1c4udgate.southcentralus.kusto.windows.net",
+  "ingestUri": "https://ingest-kvc-0356mj3ry1c4udgate.southcentralus.kusto.windows.net",
+  "databaseName": "KustoDB",
+  "tableName": "WalmartOmniTable",
   "useExistingTable": true,
   "alterTable": true,
   "queryData": true,
@@ -12,11 +12,11 @@
   "ignoreFirstRecord": false,
   "waitForIngestSeconds": 20,
   "batchingPolicy": "{ 'MaximumBatchingTimeSpan': '00:00:10', 'MaximumNumberOfItems': 500, 'MaximumRawDataSizeMB': 1024 }",
-  "tableSchema": "(rownumber:int, rowguid:string, xdouble:real, xfloat:real, xbool:bool, xint16:int, xint32:int, xint64:long, xuint8:long, xuint16:long, xuint32:long, xuint64:long, xdate:datetime, xsmalltext:string, xtext:string, xnumberAsText:string, xtime:timespan, xtextWithNulls:string, xdynamicWithNulls:dynamic)",
+  "tableSchema": "(rownumber:int, rowguid:string, testdouble:real, colfloat:real, colbool:bool, dynamicWithNulls:dynamic)",
   "data": [
     {
       "sourceType": "localFileSource",
-      "dataSourceUri": "dataset.csv",
+      "dataSourceUri": "datasetcopy.csv",
       "format": "CSV",
       "useExistingMapping": true,
       "mappingName": "",
@@ -24,7 +24,7 @@
     },
     {
       "sourceType": "localFileSource",
-      "dataSourceUri": "dataset.json",
+      "dataSourceUri": "datasetcopy.json",
       "format": "MULTIJSON",
       "useExistingMapping": false,
       "mappingName": "SampleTableMapping",

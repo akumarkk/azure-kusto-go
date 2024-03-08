@@ -180,7 +180,7 @@ func ingestData(dataSource ConfigData, dataFormat interface{}, ingestClient *ing
 	//}
 	ctx := context.Background()
 	options := []ingest.FileOption{ingest.IngestionMapping(mappingName, dataFormat.(ingest.DataFormat))}
-	filePath := fmt.Sprintf("kusto/quickstart/%s", dataSource.DataSourceUri)
+	filePath := fmt.Sprintf("/Users/anikrisms/azure/azure-kusto-go/quickstart/%s", dataSource.DataSourceUri)
 
 	// Note: No need to add "nosource" option as in that case the "ingestData" flag will be set to false, and it will be impossible to reach this code
 	// segment.
