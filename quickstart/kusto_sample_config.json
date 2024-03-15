@@ -7,7 +7,7 @@
   "alterTable": true,
   "queryData": true,
   "ingestData": true,
-  "authenticationMode": "UserPrompt",
+  "authenticationMode": "AppKey",
   "waitForUser": true,
   "ignoreFirstRecord": false,
   "waitForIngestSeconds": 20,
